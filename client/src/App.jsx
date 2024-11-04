@@ -1,21 +1,28 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import SignIn from "./components/SignIn";
-import SignUp from "./components/SignUp";
-import Projects from "./components/Projects";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import Projects from "./pages/Projects";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
+      <BrowserRouter>
+        <Header />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
