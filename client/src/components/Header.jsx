@@ -29,26 +29,13 @@ function Header() {
           />
         </form>
 
-        <button className="w-12 h-10 lg:hidden" color="gray" aria-label="Search">
+        <button
+          className="w-12 h-10 lg:hidden"
+          color="gray"
+          aria-label="Search"
+        >
           <IoIosSearch />
         </button>
-
-        <div className="flex items-center space-x-4">
-          <button
-            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200"
-            aria-label="Toggle Dark Mode"
-          >
-            <MdOutlineDarkMode />
-          </button>
-          <Link to="/sign-in">
-            <button className="px-4 py-2 bg-gradient-to-r from-purple-700 to-blue-500 text-white rounded-full">
-              Sign In
-            </button>
-          </Link>
-
-          <Navbar.Toggle className="lg:hidden" />
-        </div>
-
         <Navbar.Collapse>
           <Navbar.Link active={path === "/"} as="div">
             <Link to="/">Home</Link>
@@ -60,6 +47,22 @@ function Header() {
             <Link to="/projects">Projects</Link>
           </Navbar.Link>
         </Navbar.Collapse>
+
+        <div className="flex items-center space-x-4">
+          <button
+            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200"
+            aria-label="Toggle Dark Mode"
+          >
+            <MdOutlineDarkMode />
+          </button>
+          <Link to="/sign-in">
+            <button className="px-4 py-2 bg-gradient-to-r from-purple-700 to-blue-500 text-white rounded-full border-2 border-transparent hover:border-purple-500">
+              Sign In
+            </button>
+          </Link>
+
+          <Navbar.Toggle className="lg:hidden" />
+        </div>
       </Navbar>
     </div>
   );
