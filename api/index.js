@@ -1,9 +1,21 @@
 const express=require('express')
 const { mongoose } = require('mongoose')
 const dotenv = require('dotenv')
-
+const api =require('./routes/userRoute')
 const app = express()
 dotenv.config()
+
+
+app.use(express.json())
+app.use('/',api)
+
+
+
+
+
+
+
+
 
 mongoose.connect(process.env.MONGO)
 .then(()=>{
@@ -22,3 +34,4 @@ app.listen(port,()=>{
     
 })
 //mernBlog
+
