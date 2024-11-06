@@ -1,13 +1,15 @@
 const express=require('express')
 const { mongoose } = require('mongoose')
 const dotenv = require('dotenv')
-const api =require('./routes/userRoute')
+const userRoute =require('./routes/userRoute')
+const authRoute =require('./routes/auth.route')
 const app = express()
 dotenv.config()
 
 
 app.use(express.json())
-app.use('/',api)
+app.use('/',userRoute)
+app.use('/',authRoute)
 
 
 
