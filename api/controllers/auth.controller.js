@@ -22,6 +22,7 @@ const signUp = async (req, res, next) => {
 
     // Hash the password
     const hashPassword = await bcryptjs.hash(password, 10);
+    
 
     // Create a new user
     const newUser = new User({
