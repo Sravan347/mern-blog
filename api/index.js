@@ -9,7 +9,7 @@ dotenv.config()
 
 app.use(express.json())
 app.use('/',userRoute)
-app.use('/',authRoute)
+app.use('/api/v1/auth',authRoute)
 app.use((err,req,res,next)=>{
     const statusCode = err.statusCode || 500;
     const message = err.message || "internal server Error" 

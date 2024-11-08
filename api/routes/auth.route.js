@@ -1,6 +1,7 @@
 const express = require ('express')
 const router = express.Router()
-const {signUp}=require('../controllers/auth.controller')
+const {signUp,signIn}=require('../controllers/auth.controller')
 
-router.route("/api/v1/auth").post(signUp)
+router.route("/signUp").post(signUp)
+router.route("/signIn").post(signIn)
 module.exports=router
