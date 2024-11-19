@@ -118,5 +118,5 @@ const google = async (req, res, next) => {
   }
 };
 
-module.exports = { signUp ,signIn,google};
+module.exports = { signUp ,signIn , google};
 

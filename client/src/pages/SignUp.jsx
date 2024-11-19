@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Alert, Button, Label, Spinner, TextInput } from "flowbite-react";
-import OAuth from "../components/OAuth";
+// import OAuth from "../components/OAuth";
 
 function SignUp() {
   const [formData, setFormData] = useState({});
@@ -114,7 +114,7 @@ function SignUp() {
               "Sign Up"
             )}
           </Button>
-          <OAuth/>
+          {/* <OAuth/> */}
         </form>
 
         <div className="text-center mt-4">
